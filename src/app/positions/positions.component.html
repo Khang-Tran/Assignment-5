@@ -1,0 +1,35 @@
+<div class="center">
+  <h2>Positions</h2>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non odio sed eros tristique bibendum.
+    Nunc quis semper
+    sem.
+    <br> Morbi libero elit elementum quis faucibus ac, condimentum quis nibh.</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="loadingError" class="alert alert-danger">
+        <strong>Error!</strong> Unable to load Positions
+      </div>
+      <div class="table-responsive">
+        <table class="table table-condensed table-hover">
+          <thead>
+          <tr>
+            <th>Position Title</th>
+            <th>Position Description</th>
+            <th>Salary</th>
+          </tr>
+          </thead>
+          <tbody *ngFor='let pos of positions'>
+          <tr>
+            <td>{{pos.PositionName}}</td>
+            <td>{{pos.PositionDescription}}</td>
+            <td>{{pos.PositionBaseSalary | number: '.2'}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
