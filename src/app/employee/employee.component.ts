@@ -11,14 +11,14 @@ import { Position } from '../data/position';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit, OnDestroy {
-  private paramSubscription: any;
-  private employeeSubscription: any;
-  private getPositionsSubscription: any;
-  private saveEmployeeSubscription: any;
-  private employee: EmployeeRaw = new EmployeeRaw();
-  private positions: Position[];
-  private successMessage = false;
-  private failMessage = false;
+  paramSubscription: any;
+  employeeSubscription: any;
+  getPositionsSubscription: any;
+  saveEmployeeSubscription: any;
+  employee: EmployeeRaw = new EmployeeRaw();
+  positions: Position[];
+  successMessage = false;
+  failMessage = false;
 
   constructor(private employeeService: EmployeeService,
               private activeRoute: ActivatedRoute, private positionService: PositionService) {

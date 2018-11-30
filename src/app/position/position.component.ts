@@ -9,12 +9,12 @@ import { PositionService } from '../data/position.service';
   styleUrls: ['./position.component.css']
 })
 export class PositionComponent implements OnInit, OnDestroy {
-  private paramSubscription: any;
-  private positionSubscription: any;
-  private savePositionSubscription: any;
-  private position: Position;
-  private successMessage = false;
-  private failMessage = false;
+  paramSubscription: any;
+  positionSubscription: any;
+  savePositionSubscription: any;
+  position: Position;
+  successMessage = false;
+  failMessage = false;
 
   constructor(private activeRoute: ActivatedRoute, private positionService: PositionService) {
   }
