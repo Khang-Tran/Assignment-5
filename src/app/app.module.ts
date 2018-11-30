@@ -14,6 +14,9 @@ import { EmployeeService } from './data/employee.service';
 import { PositionService } from './data/position.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UrlService } from './data/url.service';
+import { EmployeeComponent } from './employee/employee.component';
+import { PositionComponent } from './position/position.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,14 +28,17 @@ import { UrlService } from './data/url.service';
     EmployeesComponent,
     PositionsComponent,
     NotFoundComponent,
+    EmployeeComponent,
+    PositionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [EmployeeService, PositionService, UrlService],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

@@ -9,6 +9,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <input class="form-control" id="EmployeeSearch" name="EmployeeSearch" type="text"
+             placeholder="Searchployees by Full Name or Position"
+             (keyup)="onEmployeeSearchKeyUp($event)"/>
+      <br/>
+
       <div *ngIf="loadingError" class="alert alert-danger">
         <strong>Error!</strong> Unable to load Employees
       </div>
@@ -22,8 +27,8 @@
             <th>Hire Date</th>
           </tr>
           </thead>
-          <tbody *ngFor='let emp of employees'>
-          <tr>
+          <tbody>
+          <tr *ngFor='let emp of filteredEmployees' (click)='routeEmployee(emp._id)'>
             <td>{{emp.FirstName}} {{emp.LastName}}</td>
             <td>{{emp.AddressStreet}}. {{emp.AddressState}}, {{emp.AddressCity}}. {{emp.AddressStreet}}</td>
             <td>{{emp.PhoneNum}} ext: {{emp.Extension}}</td>
