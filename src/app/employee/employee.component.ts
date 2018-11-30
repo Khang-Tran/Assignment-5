@@ -37,7 +37,7 @@ export class EmployeeComponent implements OnInit, OnDestroy {
     });
   }
 
-  onSubmit() {
+  onSubmit(f) {
     if (this.employee) {
       this.saveEmployeeSubscription = this.employeeService.saveEmployee(this.employee).subscribe(() => {
         this.successMessage = true;
